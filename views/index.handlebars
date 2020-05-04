@@ -1,0 +1,57 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="text-left" id="title">Eat-Da-Burger!</h1>
+  </div>
+</div>
+
+<div id="container-body">
+  <div id="burgerDivs">
+    <div id="toDevour">
+      <h3>Ready to Eat</h3>
+      {{#each burger}}
+      {{#unless dataValues.devoured}}
+      <div class="eachBurger">
+        <div>
+          <p class="burger">
+            {{this.dataValues.id}}. &nbsp 
+            {{this.dataValues.burger_name}}
+          </p>
+        </div>
+        <div>
+          <form id="new-customer" class="button-size">
+            <textarea id="customer-text" type="text" name="customer"></textarea>
+            <button data-burgerid="{{this.dataValues.id}}" class="delBurger">Devour It!</button>
+          </form>
+        </div>
+      </div>
+      {{/unless}}
+      {{/each}}
+    </div>
+
+    <div id="devoured">
+      <h3>Already Eaten:</h3>
+      {{#each burger}}
+      {{#if dataValues.devoured}}
+      <div>
+      <p class="burger">{{this.dataValues.id}}. &nbsp {{this.dataValues.burger_name}}</p>
+      <p>(devoured by: {{this.dataValues.Customer.dataValues.customer_name}})</p>
+      </div>
+      {{/if}}
+      {{/each}}
+    </div>
+  </div>
+
+  <div id="submit-form" class="text-center">
+    <h2>Add a burger:</h2>
+    <div id="submit-text-button">
+      <form id="createburger" class="button-size">
+        <textarea type="text" name="burger"></textarea>
+        <button id="submitButton" type="submit">Save Burger!</button>
+      </form>
+    </div>
+    <div id="instructions">
+      <p>Enter a burger you want to eat - Click the button to submit!</p>
+    </div>
+  </div>
+</div>
+

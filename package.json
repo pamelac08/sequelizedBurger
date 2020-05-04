@@ -1,0 +1,26 @@
+{
+  "name": "sequelizedburger",
+  "version": "1.0.0",
+  "description": "Unit 15: Sequelize HW",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pamelac08/sequelizedBurger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pamelac08/sequelizedBurger/issues"
+  },
+  "homepage": "https://github.com/pamelac08/sequelizedBurger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.41.2"
+  }
+}
